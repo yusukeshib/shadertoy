@@ -1,0 +1,22 @@
+[package]
+name = "shadertoy"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+anyhow = "1.0.89"
+clap = { version = "4.5.18", features = ["derive"] }
+env_logger = "0.11.5"
+image = "0.25.2"
+log = "0.4.22"
+serde = { version = "1.0.210", features = ["derive"] }
+serde_json = "1.0.128"
+thiserror = "1.0.64"
+three-d = { version = "0.17.0", features = ["headless"] }
+three-d-asset = { version = "0.7.0",features = ["png"] }
+tokio = { version = "1.40.0", features = ["macros", "rt-multi-thread"] }
+winit = "0.28.7"
+
+[[bin]]
+name = "shadertoy"
+path = "src/shadertoy.rs"
